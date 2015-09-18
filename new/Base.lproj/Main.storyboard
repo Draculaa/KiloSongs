@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wrB-Dc-D1x">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hmR-Z5-0KM">
+            <objects>
+                <navigationController id="wrB-Dc-D1x" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kv3-ys-o8h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="LhY-Pb-rVr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onj-xR-QZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-845" y="27"/>
+        </scene>
+        <!--Master-->
+        <scene sceneID="VgW-fR-Quf">
+            <objects>
+                <tableViewController title="Master" id="pGg-6v-bdr" customClass="SongsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SongCell" id="dnf-Et-QaR" customClass="SongTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dnf-Et-QaR" id="XcP-Fg-zyZ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-Dg-FRY">
+                                            <rect key="frame" x="341" y="11" width="249" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="41" id="2GZ-7F-ZEf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="2GZ-7F-ZEf"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mns-w3-N4G">
+                                            <rect key="frame" x="10" y="9" width="200" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="0wU-DH-0d5"/>
+                                                <constraint firstAttribute="width" constant="59" id="YER-hq-2IE"/>
+                                                <constraint firstAttribute="width" constant="59" id="dyN-36-c39"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="0wU-DH-0d5"/>
+                                                    <exclude reference="YER-hq-2IE"/>
+                                                    <exclude reference="dyN-36-c39"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="AcP-Dg-FRY" secondAttribute="trailing" constant="10" id="AoD-Pn-4e9"/>
+                                        <constraint firstItem="AcP-Dg-FRY" firstAttribute="leading" secondItem="Mns-w3-N4G" secondAttribute="trailing" constant="8" id="BnP-fS-1JS"/>
+                                        <constraint firstItem="AcP-Dg-FRY" firstAttribute="leading" secondItem="Mns-w3-N4G" secondAttribute="trailing" constant="10" id="Qfv-XG-bn1"/>
+                                        <constraint firstItem="AcP-Dg-FRY" firstAttribute="leading" secondItem="XcP-Fg-zyZ" secondAttribute="leading" constant="10" id="SEp-uZ-Y6r"/>
+                                        <constraint firstItem="Mns-w3-N4G" firstAttribute="leading" secondItem="XcP-Fg-zyZ" secondAttribute="leading" constant="10" id="blw-QV-XzR"/>
+                                        <constraint firstAttribute="centerY" secondItem="Mns-w3-N4G" secondAttribute="centerY" id="ltH-Fc-QAq"/>
+                                        <constraint firstAttribute="centerY" secondItem="AcP-Dg-FRY" secondAttribute="centerY" id="rG2-2b-3ut"/>
+                                        <constraint firstItem="AcP-Dg-FRY" firstAttribute="leading" secondItem="XcP-Fg-zyZ" secondAttribute="leading" constant="10" id="xIj-GH-XDQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="AcP-Dg-FRY" secondAttribute="trailing" constant="10" id="y1a-rB-k8N"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="BnP-fS-1JS"/>
+                                            <exclude reference="Qfv-XG-bn1"/>
+                                            <exclude reference="SEp-uZ-Y6r"/>
+                                            <exclude reference="xIj-GH-XDQ"/>
+                                            <exclude reference="y1a-rB-k8N"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorLabel" destination="Mns-w3-N4G" id="74M-5Z-xdl"/>
+                                    <outlet property="songLabel" destination="AcP-Dg-FRY" id="8fK-L5-T0w"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="pGg-6v-bdr" id="Ko1-sP-7J7"/>
+                            <outlet property="delegate" destination="pGg-6v-bdr" id="Edg-AN-rOT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Master" id="r6B-gj-A7M"/>
+                    <connections>
+                        <outlet property="tableView" destination="mLL-gJ-YKr" id="uVJ-Rp-Xrq"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61" y="27"/>
+        </scene>
+    </scenes>
+</document>
